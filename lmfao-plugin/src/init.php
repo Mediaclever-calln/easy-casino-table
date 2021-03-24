@@ -27,10 +27,10 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @uses {wp-editor} for WP editor styles.
  * @since 1.0.0
  */
-function my_block_cgb_block_assets() { // phpcs:ignore
+function lmfao_block_cgb_block_assets() { // phpcs:ignore
 	// Register block styles for both frontend + backend.
 	wp_register_style(
-		'my_block-cgb-style-css', // Handle.
+		'lmfao_block-cgb-style-css', // Handle.
 		plugins_url( 'dist/blocks.style.build.css', dirname( __FILE__ ) ), // Block style CSS.
 		is_admin() ? array( 'wp-editor' ) : null, // Dependency to include the CSS after it.
 		null // filemtime( plugin_dir_path( __DIR__ ) . 'dist/blocks.style.build.css' ) // Version: File modification time.
@@ -38,7 +38,7 @@ function my_block_cgb_block_assets() { // phpcs:ignore
 
 	// Register block editor script for backend.
 	wp_register_script(
-		'my_block-cgb-block-js', // Handle.
+		'lmfao_block-cgb-block-js', // Handle.
 		plugins_url( '/dist/blocks.build.js', dirname( __FILE__ ) ), // Block.build.js: We register the block here. Built with Webpack.
 		array( 'wp-blocks', 'wp-i18n', 'wp-element', 'wp-editor' ), // Dependencies, defined above.
 		null, // filemtime( plugin_dir_path( __DIR__ ) . 'dist/blocks.build.js' ), // Version: filemtime — Gets file modification time.
@@ -47,7 +47,7 @@ function my_block_cgb_block_assets() { // phpcs:ignore
 
 	// Register block editor styles for backend.
 	wp_register_style(
-		'my_block-cgb-block-editor-css', // Handle.
+		'lmfao_block-cgb-block-editor-css', // Handle.
 		plugins_url( 'dist/blocks.editor.build.css', dirname( __FILE__ ) ), // Block editor CSS.
 		array( 'wp-edit-blocks' ), // Dependency to include the CSS after it.
 		null // filemtime( plugin_dir_path( __DIR__ ) . 'dist/blocks.editor.build.css' ) // Version: File modification time.
@@ -55,7 +55,7 @@ function my_block_cgb_block_assets() { // phpcs:ignore
 
 	// WP Localized globals. Use dynamic PHP stuff in JavaScript via `cgbGlobal` object.
 	wp_localize_script(
-		'my_block-cgb-block-js',
+		'lmfao_block-cgb-block-js',
 		'cgbGlobal', // Array containing dynamic data for a JS Global.
 		[
 			'pluginDirPath' => plugin_dir_path( __DIR__ ),
@@ -77,17 +77,17 @@ function my_block_cgb_block_assets() { // phpcs:ignore
 	register_block_type(
 		'cgb/block-my-block', array(
 			// Enqueue blocks.style.build.css on both frontend & backend.
-			'style'         => 'my_block-cgb-style-css',
+			'style'         => 'lmfao_block-cgb-style-css',
 			// Enqueue blocks.build.js in the editor only.
-			'editor_script' => 'my_block-cgb-block-js',
+			'editor_script' => 'lmfao_block-cgb-block-js',
 			// Enqueue blocks.editor.build.css in the editor only.
-			'editor_style'  => 'my_block-cgb-block-editor-css',
-			'render_callback' => 'render_post_block'
+			'editor_style'  => 'lmfao_block-cgb-block-editor-css',
+			'render_callback' => 'lmfao_render_post_block'
 		)
 	);
 }
 
-function render_post_block($attributes) {
+function lmfao_render_post_block($attributes) {
 
 	$postid = $attributes['selectedCasino'];
 		
@@ -103,4 +103,4 @@ function render_post_block($attributes) {
 }
 
 // Hook: Block assets.
-add_action( 'init', 'my_block_cgb_block_assets' );
+add_action( 'init', 'lmfao_block_cgb_block_assets' );
