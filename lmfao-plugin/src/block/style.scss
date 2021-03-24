@@ -1,0 +1,211 @@
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+
+.tablewrapper{
+  display: flex;
+  width:100%;
+  justify-content: center;
+}
+.lmfaocell{
+  width: 90%;
+  border-radius: 3px;
+  background-color: #fff;
+  margin-bottom: 1rem;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.lmfaotable{
+  margin:0;
+  width: 100%;
+  
+}
+.lmfaobody{
+  width:100%;
+  margin-top: 1rem;
+}
+.lmfaotr{
+  width: 100%;
+}
+.lmfaoimg{
+  width: 15%;
+}
+.lmfaoimg img{
+  height: 100px;
+  width: auto;
+  padding-top:0.5rem;
+  padding-left:0.5rem;
+}
+.lmfaocol1{
+  width: 30%;
+  font-size: 0.9rem;
+}
+.col1start{
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+.lmfaocol2{
+  width: 35%;
+  
+}
+.lmfaolink{
+  width: 20%;
+  text-align: center;
+}
+.lmfaoinfobox{
+  text-align: right;
+}
+.lmfaoinfobox{
+  font-size: 0.7rem;
+  color: #8c8c8ce9;
+}
+
+.lmfaolink a {
+  background-color: #007CC7;
+  color: white;
+  padding: 0.9rem 2.8rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 3px;
+  text-align: center;
+  border: 2px solid #bbbbbbde;
+}
+
+.lmfaolink a:hover {
+  background-color: #4DA8DA;
+  cursor: pointer;
+}
+.lmfaoinfotext{
+  padding-right:1rem;
+}
+.tc-link{
+  color:#007CC7;
+  text-decoration: none;
+}
+.col2follow{
+  font-size: 0.99rem;
+  color: #8c8c8c;
+}
+.tclink{
+  text-decoration: none;
+}
+.tablewrapper{
+  display: flex;
+  width:100%;
+  justify-content: center;
+}
+.tablewrapper-review{
+  background: #007CC7;
+  padding-top:0.5rem;
+  display: flex;
+  justify-content: center;
+}
+#col1lmfao{
+  color: white;
+}
+#linklmfao a{
+  background-color: #4DA8DA;
+}
+#linklmfao a:hover{
+  background-color: #4DA8DA;
+}
+.lmfaoinfobox{
+  background: #eceded;
+  padding-top:5px;
+  padding-bottom:5px;
+}
+@media only screen and (max-width: 650px) {
+.lmfaocell {
+  width: 100%;
+  border-radius: 3px;
+  background-color: #fff;
+  margin-bottom: 1rem;
+  border: none;
+}
+.lmfaocol1{
+  padding-left: 30px;
+}
+.lmfaolink a{
+  background: #007CC7;
+  border: none;
+}
+.tc-link{
+  font-size: 14px;
+}
+.tclink{
+  color: #4DA8DA;
+}
+.col2follow{
+  font-size: 14px;
+}
+
+.lmfaoinfobox{
+  text-align:center;
+}
+.lmfaoimg{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin:0;
+  padding:0;
+}
+.lmfaoimg img{
+  height: 100px;
+  width: auto;
+  padding-top:0.2rem;
+  padding-left:0;
+  padding-bottom:0.2rem;
+  border-radius: 10px;
+}
+.lmfaocol1{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin:0;
+  padding:0;
+  padding-top:0.5rem;
+  padding-bottom:0.5rem;
+}
+.lmfaocol2{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin:0;
+  padding:0;
+  padding-bottom:0.5rem;
+}
+.lmfaolink{
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin:0;
+  padding-bottom: 10px;
+}
+.lmfaolink a {
+  padding: 0.5rem 8rem;
+}
+.col2follow{
+  padding-left: 0.5rem;
+}
+.tc-link{
+  
+}
+.col1start{
+  padding-right:0.5;
+  font-size: 1.2rem;
+}
+.lmfaocol1{
+  text-align: center;
+  display: block;
+  z-index: 5;
+  position: relative;
+}
+.lmfaocol2{
+  text-align: center;
+  display: block;
+  z-index: 5;
+  position: relative;
+}
+}
