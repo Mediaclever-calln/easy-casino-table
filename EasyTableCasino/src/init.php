@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @uses {wp-editor} for WP editor styles.
  * @since 1.0.0
  */
-function my_block_cgb_block_assets() { // phpcs:ignore
+function ect_block_cgb_block_assets() { // phpcs:ignore
 	// Register block styles for both frontend + backend.
 	wp_register_style(
 		'my_block-cgb-style-css', // Handle.
@@ -82,12 +82,12 @@ function my_block_cgb_block_assets() { // phpcs:ignore
 			'editor_script' => 'my_block-cgb-block-js',
 			// Enqueue blocks.editor.build.css in the editor only.
 			'editor_style'  => 'my_block-cgb-block-editor-css',
-			'render_callback' => 'render_post_block'
+			'render_callback' => 'ect_render_post_block'
 		)
 	);
 }
 
-function render_post_block($attributes) {
+function ect_render_post_block($attributes) {
 
 	$postid = $attributes['selectedCasino'];
 		
@@ -103,4 +103,4 @@ function render_post_block($attributes) {
 }
 
 // Hook: Block assets.
-add_action( 'init', 'my_block_cgb_block_assets' );
+add_action( 'init', 'ect_block_cgb_block_assets' );
